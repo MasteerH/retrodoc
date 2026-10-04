@@ -35,10 +35,11 @@ def main():
     lecteur = argparse.ArgumentParser()
     lecteur.add_argument("commande", choices=["analyze"])
     lecteur.add_argument("dossier")
+    lecteur.add_argument("--sortie", default="analyse.json")
     args = lecteur.parse_args()
 
     classes = analyser_dossier(args.dossier)
-    ecrire_json(classes, "analyse.json")
+    ecrire_json(classes, args.sortie)
     print(len(classes), "classes trouvées")
 
 

@@ -8,6 +8,15 @@ from tree_sitter import Language, Parser
 JAVA = Language(tree_sitter_java.language())
 parser = Parser(JAVA)
 
+def lire_visibilite(noeud) -> str:
+    visibility = "package"
+    for i in noeud.named_children:
+        if i.type == "modifiers":
+            for mot in i.text.decode().split():
+                if mot in ("public", "private", "protected"):
+                    visibility = mot
+    return visibility
+
 
 def parser_fichier(chemin: str) -> list[ClassInfo]:
     
@@ -23,7 +32,7 @@ def parser_fichier(chemin: str) -> list[ClassInfo]:
         attributes = []
         methodes = []
 
-        if enfant.type in ("class_declaration", "interface_declaration"):
+        if enfant.type in ("class_declaration", "interface_declaration", "enum_declaration"):
             noeud_parent = enfant.child_by_field_name("superclass")
             noeud_interface = enfant.child_by_field_name("interfaces")
             noeud_corps = enfant.child_by_field_name("body")
@@ -36,10 +45,7 @@ def parser_fichier(chemin: str) -> list[ClassInfo]:
 
                     nom_att = declarateur.child_by_field_name("name").text.decode()
                     
-                    visibility = "package"
-                    for i in kid.named_children:
-                        if i.type == "modifiers":
-                            visibility = i.text.decode()
+                    visibility = lire_visibilite(kid)
 
                     field  = FieldInfo(nom= nom_att, type = type_att, visibilite = visibility)
                     attributes.append(field)
@@ -56,10 +62,8 @@ def parser_fichier(chemin: str) -> list[ClassInfo]:
 
                     nom_methode = kid.child_by_field_name("name").text.decode()
 
-                    visibility = "package"
-                    for i in kid.named_children:
-                        if i.type == "modifiers":
-                            visibility = i.text.decode()
+                    visibility = lire_visibilite(kid)
+
                     parametres = []
                     param = kid.child_by_field_name("parameters")
                     for parametre in param.named_children:
@@ -97,6 +101,8 @@ def parser_fichier(chemin: str) -> list[ClassInfo]:
             genre = "interface"
             if enfant.type == "class_declaration":
                 genre = "class"
+            elif enfant.type == "enum_declaration":
+                genre = "enum"
 
             classe = ClassInfo(
                 nom = enfant.child_by_field_name("name").text.decode(),

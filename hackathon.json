@@ -1,0 +1,2006 @@
+[
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\Batiment.java",
+    "ligne_debut": 4,
+    "ligne_fin": 60,
+    "nom": "Batiment",
+    "genre": "class",
+    "parent": null,
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "id",
+        "type": "int",
+        "visibilite": "private"
+      },
+      {
+        "nom": "nom",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "niveauxContenus",
+        "type": "List<Niveau>",
+        "visibilite": "private"
+      },
+      {
+        "nom": "nombreVisiteurs",
+        "type": "int",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "Batiment",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "id",
+            "type": "int"
+          },
+          {
+            "nom": "nom",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getId",
+        "visibilite": "public",
+        "type_sortie": "int",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getNom",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getNiveauxContenus",
+        "visibilite": "public",
+        "type_sortie": "List<Niveau>",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getNombreVisiteurs",
+        "visibilite": "public",
+        "type_sortie": "int",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "addNiveau",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "niveau",
+            "type": "Niveau"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "majEffectif",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\InstallationInteractive.java",
+    "ligne_debut": 1,
+    "ligne_fin": 24,
+    "nom": "InstallationInteractive",
+    "genre": "class",
+    "parent": "Oeuvre",
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "duree",
+        "type": "int",
+        "visibilite": "private"
+      },
+      {
+        "nom": "format",
+        "type": "String",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "InstallationInteractive",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "nom",
+            "type": "String"
+          },
+          {
+            "nom": "auteur",
+            "type": "String"
+          },
+          {
+            "nom": "description",
+            "type": "String"
+          },
+          {
+            "nom": "theme",
+            "type": "String"
+          },
+          {
+            "nom": "duree",
+            "type": "int"
+          },
+          {
+            "nom": "format",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getDuree",
+        "visibilite": "public",
+        "type_sortie": "int",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getFormat",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\Main.java",
+    "ligne_debut": 20,
+    "ligne_fin": 251,
+    "nom": "Main",
+    "genre": "class",
+    "parent": null,
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "jsonPath",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "musees",
+        "type": "List<Musee>",
+        "visibilite": "private"
+      },
+      {
+        "nom": "salles",
+        "type": "Map<Integer, Salle>",
+        "visibilite": "private"
+      },
+      {
+        "nom": "visiteurs",
+        "type": "List<Visiteur>",
+        "visibilite": "private"
+      },
+      {
+        "nom": "visites",
+        "type": "List<Visite>",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": false,
+        "nom": "main",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "args",
+            "type": "String[]"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "chargerVisiteurs",
+        "visibilite": "private",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "visiteursJson",
+            "type": "JSONArray"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "chargerMusees",
+        "visibilite": "private",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "museesJson",
+            "type": "JSONArray"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "afficherMusees",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\Manager.java",
+    "ligne_debut": 1,
+    "ligne_fin": 31,
+    "nom": "Manager",
+    "genre": "class",
+    "parent": "Utilisateur",
+    "interfaces": [],
+    "attributs": [],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "Manager",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "id",
+            "type": "int"
+          },
+          {
+            "nom": "nom",
+            "type": "String"
+          },
+          {
+            "nom": "prenom",
+            "type": "String"
+          },
+          {
+            "nom": "paysOrigine",
+            "type": "String"
+          },
+          {
+            "nom": "genre",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "obtenirStatistique",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "musee",
+            "type": "Musee"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\Manuscrit.java",
+    "ligne_debut": 1,
+    "ligne_fin": 24,
+    "nom": "Manuscrit",
+    "genre": "class",
+    "parent": "Oeuvre",
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "langue",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "annee",
+        "type": "int",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "Manuscrit",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "nom",
+            "type": "String"
+          },
+          {
+            "nom": "auteur",
+            "type": "String"
+          },
+          {
+            "nom": "description",
+            "type": "String"
+          },
+          {
+            "nom": "theme",
+            "type": "String"
+          },
+          {
+            "nom": "langue",
+            "type": "String"
+          },
+          {
+            "nom": "annee",
+            "type": "int"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getLangue",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getAnnee",
+        "visibilite": "public",
+        "type_sortie": "int",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\Musee.java",
+    "ligne_debut": 6,
+    "ligne_fin": 11,
+    "nom": "TypeMusee",
+    "genre": "enum",
+    "parent": null,
+    "interfaces": [],
+    "attributs": [],
+    "methodes": []
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\Musee.java",
+    "ligne_debut": 14,
+    "ligne_fin": 98,
+    "nom": "Musee",
+    "genre": "class",
+    "parent": null,
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "nom",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "ville",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "pays",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "type",
+        "type": "TypeMusee",
+        "visibilite": "private"
+      },
+      {
+        "nom": "batimentsContenus",
+        "type": "List<Batiment>",
+        "visibilite": "private"
+      },
+      {
+        "nom": "visiteursUniques",
+        "type": "Set<Visiteur>",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "Musee",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "nom",
+            "type": "String"
+          },
+          {
+            "nom": "ville",
+            "type": "String"
+          },
+          {
+            "nom": "pays",
+            "type": "String"
+          },
+          {
+            "nom": "type",
+            "type": "TypeMusee"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getNom",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getVille",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getPays",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getType",
+        "visibilite": "public",
+        "type_sortie": "TypeMusee",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getBatimentsContenus",
+        "visibilite": "public",
+        "type_sortie": "List<Batiment>",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "addBatiment",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "batiment",
+            "type": "Batiment"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "majEffectif",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "enregistrerVisiteur",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "v",
+            "type": "Visiteur"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getNombreVisiteursUniques",
+        "visibilite": "public",
+        "type_sortie": "int",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getSalleLaPlusFrequentee",
+        "visibilite": "public",
+        "type_sortie": "Salle",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\MuseeArtsDecoratifs.java",
+    "ligne_debut": 4,
+    "ligne_fin": 38,
+    "nom": "MuseeArtsDecoratifs",
+    "genre": "class",
+    "parent": "Musee",
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "stylesDecoratifs",
+        "type": "List<String>",
+        "visibilite": "private"
+      },
+      {
+        "nom": "inclutDesignContemporain",
+        "type": "boolean",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "MuseeArtsDecoratifs",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "nom",
+            "type": "String"
+          },
+          {
+            "nom": "ville",
+            "type": "String"
+          },
+          {
+            "nom": "pays",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getStylesDecoratifs",
+        "visibilite": "public",
+        "type_sortie": "List<String>",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "setStylesDecoratifs",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "stylesDecoratifs",
+            "type": "List<String>"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "isInclutDesignContemporain",
+        "visibilite": "public",
+        "type_sortie": "boolean",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "setInclutDesignContemporain",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "inclutDesignContemporain",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\MuseeBeauxArts.java",
+    "ligne_debut": 4,
+    "ligne_fin": 38,
+    "nom": "MuseeBeauxArts",
+    "genre": "class",
+    "parent": "Musee",
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "mouvementsArtistiques",
+        "type": "List<String>",
+        "visibilite": "private"
+      },
+      {
+        "nom": "artistesMajeurs",
+        "type": "List<String>",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "MuseeBeauxArts",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "nom",
+            "type": "String"
+          },
+          {
+            "nom": "ville",
+            "type": "String"
+          },
+          {
+            "nom": "pays",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getMouvementsArtistiques",
+        "visibilite": "public",
+        "type_sortie": "List<String>",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "setMouvementsArtistiques",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "mouvementsArtistiques",
+            "type": "List<String>"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getArtistesMajeurs",
+        "visibilite": "public",
+        "type_sortie": "List<String>",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "setArtistesMajeurs",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "artistesMajeurs",
+            "type": "List<String>"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\MuseeHistoire.java",
+    "ligne_debut": 4,
+    "ligne_fin": 53,
+    "nom": "MuseeHistoire",
+    "genre": "class",
+    "parent": "Musee",
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "periodesHistoriques",
+        "type": "List<String>",
+        "visibilite": "private"
+      },
+      {
+        "nom": "centreEventSpecifique",
+        "type": "boolean",
+        "visibilite": "private"
+      },
+      {
+        "nom": "evenementSpecifique",
+        "type": "String",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "MuseeHistoire",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "nom",
+            "type": "String"
+          },
+          {
+            "nom": "ville",
+            "type": "String"
+          },
+          {
+            "nom": "pays",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getPeriodesHistoriques",
+        "visibilite": "public",
+        "type_sortie": "List<String>",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "setPeriodesHistoriques",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "periodesHistoriques",
+            "type": "List<String>"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "isCentreEventSpecifique",
+        "visibilite": "public",
+        "type_sortie": "boolean",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "setCentreEventSpecifique",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "centreEventSpecifique",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getEvenementSpecifique",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "setEvenementSpecifique",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "evenementSpecifique",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\MuseeHistoireNaturelle.java",
+    "ligne_debut": 4,
+    "ligne_fin": 38,
+    "nom": "MuseeHistoireNaturelle",
+    "genre": "class",
+    "parent": "Musee",
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "collections",
+        "type": "List<String>",
+        "visibilite": "private"
+      },
+      {
+        "nom": "contientSpecimensVivants",
+        "type": "boolean",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "MuseeHistoireNaturelle",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "nom",
+            "type": "String"
+          },
+          {
+            "nom": "ville",
+            "type": "String"
+          },
+          {
+            "nom": "pays",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getCollections",
+        "visibilite": "public",
+        "type_sortie": "List<String>",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "setCollections",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "collections",
+            "type": "List<String>"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "isContientSpecimensVivants",
+        "visibilite": "public",
+        "type_sortie": "boolean",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "setContientSpecimensVivants",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "contientSpecimensVivants",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\MuseeSciences.java",
+    "ligne_debut": 4,
+    "ligne_fin": 38,
+    "nom": "MuseeSciences",
+    "genre": "class",
+    "parent": "Musee",
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "disciplines",
+        "type": "List<String>",
+        "visibilite": "private"
+      },
+      {
+        "nom": "interactif",
+        "type": "boolean",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "MuseeSciences",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "nom",
+            "type": "String"
+          },
+          {
+            "nom": "ville",
+            "type": "String"
+          },
+          {
+            "nom": "pays",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getDisciplines",
+        "visibilite": "public",
+        "type_sortie": "List<String>",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "setDisciplines",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "disciplines",
+            "type": "List<String>"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "isInteractif",
+        "visibilite": "public",
+        "type_sortie": "boolean",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "setInteractif",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "interactif",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\Niveau.java",
+    "ligne_debut": 4,
+    "ligne_fin": 57,
+    "nom": "Niveau",
+    "genre": "class",
+    "parent": null,
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "id",
+        "type": "int",
+        "visibilite": "private"
+      },
+      {
+        "nom": "nom",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "nombreVisiteurs",
+        "type": "int",
+        "visibilite": "private"
+      },
+      {
+        "nom": "sallesContenues",
+        "type": "List<Salle>",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "Niveau",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "id",
+            "type": "int"
+          },
+          {
+            "nom": "nom",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getId",
+        "visibilite": "public",
+        "type_sortie": "int",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getNom",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getNombreVisiteurs",
+        "visibilite": "public",
+        "type_sortie": "int",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getSallesContenues",
+        "visibilite": "public",
+        "type_sortie": "List<Salle>",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "addSalle",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "salle",
+            "type": "Salle"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "majEffectif",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\Oeuvre.java",
+    "ligne_debut": 1,
+    "ligne_fin": 42,
+    "nom": "Oeuvre",
+    "genre": "class",
+    "parent": null,
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "nom",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "auteur",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "description",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "theme",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "dansSalle",
+        "type": "Salle",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "Oeuvre",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "nom",
+            "type": "String"
+          },
+          {
+            "nom": "auteur",
+            "type": "String"
+          },
+          {
+            "nom": "description",
+            "type": "String"
+          },
+          {
+            "nom": "theme",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getNom",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getAuteur",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getDescription",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getTheme",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getDansSalle",
+        "visibilite": "public",
+        "type_sortie": "Salle",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "setDansSalle",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "dansSalle",
+            "type": "Salle"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\Peinture.java",
+    "ligne_debut": 1,
+    "ligne_fin": 23,
+    "nom": "Peinture",
+    "genre": "class",
+    "parent": "Oeuvre",
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "technique",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "support",
+        "type": "String",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "Peinture",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "nom",
+            "type": "String"
+          },
+          {
+            "nom": "auteur",
+            "type": "String"
+          },
+          {
+            "nom": "description",
+            "type": "String"
+          },
+          {
+            "nom": "theme",
+            "type": "String"
+          },
+          {
+            "nom": "technique",
+            "type": "String"
+          },
+          {
+            "nom": "support",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getTechnique",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getSupport",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\Salle.java",
+    "ligne_debut": 4,
+    "ligne_fin": 99,
+    "nom": "Salle",
+    "genre": "class",
+    "parent": null,
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "id",
+        "type": "int",
+        "visibilite": "private"
+      },
+      {
+        "nom": "nom",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "nombreVisiteurs",
+        "type": "int",
+        "visibilite": "private"
+      },
+      {
+        "nom": "capacite",
+        "type": "int",
+        "visibilite": "private"
+      },
+      {
+        "nom": "theme",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "sallesAccessibles",
+        "type": "List<Salle>",
+        "visibilite": "private"
+      },
+      {
+        "nom": "oeuvresContenues",
+        "type": "List<Oeuvre>",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "Salle",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "id",
+            "type": "int"
+          },
+          {
+            "nom": "nom",
+            "type": "String"
+          },
+          {
+            "nom": "capacite",
+            "type": "int"
+          },
+          {
+            "nom": "theme",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getId",
+        "visibilite": "public",
+        "type_sortie": "int",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getNom",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getNombreVisiteurs",
+        "visibilite": "public",
+        "type_sortie": "int",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getCapacite",
+        "visibilite": "public",
+        "type_sortie": "int",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getSallesAccessibles",
+        "visibilite": "public",
+        "type_sortie": "List<Salle>",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getOeuvresContenues",
+        "visibilite": "public",
+        "type_sortie": "List<Oeuvre>",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getTheme",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "addSalle",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "salle",
+            "type": "Salle"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "addOeuvre",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "oeuvre",
+            "type": "Oeuvre"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "estPleine",
+        "visibilite": "public",
+        "type_sortie": "boolean",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "ajouterVisiteur",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "retirerVisiteur",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "majEffectif",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\Sculpture.java",
+    "ligne_debut": 1,
+    "ligne_fin": 23,
+    "nom": "Sculpture",
+    "genre": "class",
+    "parent": "Oeuvre",
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "materiaux",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "hauteur",
+        "type": "float",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "Sculpture",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "nom",
+            "type": "String"
+          },
+          {
+            "nom": "auteur",
+            "type": "String"
+          },
+          {
+            "nom": "description",
+            "type": "String"
+          },
+          {
+            "nom": "theme",
+            "type": "String"
+          },
+          {
+            "nom": "materiaux",
+            "type": "String"
+          },
+          {
+            "nom": "hauteur",
+            "type": "float"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getMateriaux",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getHauteur",
+        "visibilite": "public",
+        "type_sortie": "float",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\Utilisateur.java",
+    "ligne_debut": 1,
+    "ligne_fin": 40,
+    "nom": "Utilisateur",
+    "genre": "class",
+    "parent": null,
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "id",
+        "type": "int",
+        "visibilite": "private"
+      },
+      {
+        "nom": "nom",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "prenom",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "paysOrigine",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "genre",
+        "type": "String",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "Utilisateur",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "id",
+            "type": "int"
+          },
+          {
+            "nom": "nom",
+            "type": "String"
+          },
+          {
+            "nom": "prenom",
+            "type": "String"
+          },
+          {
+            "nom": "paysOrigine",
+            "type": "String"
+          },
+          {
+            "nom": "genre",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getId",
+        "visibilite": "public",
+        "type_sortie": "int",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getNom",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getPrenom",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getPaysOrigine",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getGenre",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\Visite.java",
+    "ligne_debut": 6,
+    "ligne_fin": 38,
+    "nom": "Visite",
+    "genre": "class",
+    "parent": null,
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "date",
+        "type": "String",
+        "visibilite": "protected"
+      },
+      {
+        "nom": "historique",
+        "type": "List<Salle>",
+        "visibilite": "protected"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "Visite",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "date",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "ajouterSalle",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": [
+          {
+            "nom": "s",
+            "type": "Salle"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "SallePossible",
+        "visibilite": "public",
+        "type_sortie": "List<Salle>",
+        "parametres": [
+          {
+            "nom": "salleActuelle",
+            "type": "Salle"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\VisiteGuidee.java",
+    "ligne_debut": 5,
+    "ligne_fin": 48,
+    "nom": "VisiteGuidee",
+    "genre": "class",
+    "parent": "Visite",
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "parcours",
+        "type": "List<Salle>",
+        "visibilite": "private"
+      },
+      {
+        "nom": "index",
+        "type": "int",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "VisiteGuidee",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "date",
+            "type": "String"
+          },
+          {
+            "nom": "parcours",
+            "type": "List<Salle>"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "SallePossible",
+        "visibilite": "public",
+        "type_sortie": "List<Salle>",
+        "parametres": [
+          {
+            "nom": "salleActuelle",
+            "type": "Salle"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\VisiteLibre.java",
+    "ligne_debut": 5,
+    "ligne_fin": 22,
+    "nom": "VisiteLibre",
+    "genre": "class",
+    "parent": "Visite",
+    "interfaces": [],
+    "attributs": [],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "VisiteLibre",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "date",
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "SallePossible",
+        "visibilite": "public",
+        "type_sortie": "List<Salle>",
+        "parametres": [
+          {
+            "nom": "salleActuelle",
+            "type": "Salle"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\VisiteThematique.java",
+    "ligne_debut": 6,
+    "ligne_fin": 48,
+    "nom": "VisiteThematique",
+    "genre": "class",
+    "parent": "Visite",
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "theme",
+        "type": "String",
+        "visibilite": "private"
+      },
+      {
+        "nom": "parcoursThematique",
+        "type": "List<Salle>",
+        "visibilite": "private"
+      },
+      {
+        "nom": "index",
+        "type": "int",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "VisiteThematique",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "date",
+            "type": "String"
+          },
+          {
+            "nom": "theme",
+            "type": "String"
+          },
+          {
+            "nom": "parcours",
+            "type": "List<Salle>"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "SallePossible",
+        "visibilite": "public",
+        "type_sortie": "List<Salle>",
+        "parametres": [
+          {
+            "nom": "salleActuelle",
+            "type": "Salle"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  },
+  {
+    "fichier": "C:\\Users\\MasteerH Desktop\\Desktop\\3A\\hackaton java POO\\2024-2025-poo-java-g17-main\\Visiteur.java",
+    "ligne_debut": 5,
+    "ligne_fin": 99,
+    "nom": "Visiteur",
+    "genre": "class",
+    "parent": "Utilisateur",
+    "interfaces": [],
+    "attributs": [
+      {
+        "nom": "salleActuelle",
+        "type": "Salle",
+        "visibilite": "private"
+      },
+      {
+        "nom": "modeDeVisite",
+        "type": "Visite",
+        "visibilite": "private"
+      }
+    ],
+    "methodes": [
+      {
+        "est_constructeur": true,
+        "nom": "Visiteur",
+        "visibilite": "public",
+        "type_sortie": null,
+        "parametres": [
+          {
+            "nom": "id",
+            "type": "int"
+          },
+          {
+            "nom": "nom",
+            "type": "String"
+          },
+          {
+            "nom": "prenom",
+            "type": "String"
+          },
+          {
+            "nom": "paysOrigine",
+            "type": "String"
+          },
+          {
+            "nom": "genre",
+            "type": "String"
+          },
+          {
+            "nom": "modeDeVisite",
+            "type": "Visite"
+          },
+          {
+            "nom": "salleActuelle",
+            "type": "Salle"
+          }
+        ]
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getSalleActuelle",
+        "visibilite": "public",
+        "type_sortie": "Salle",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "getOeuvresSalleActuelle",
+        "visibilite": "public",
+        "type_sortie": "List<Oeuvre>",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "changerSalle",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "afficherParcours",
+        "visibilite": "public",
+        "type_sortie": "void",
+        "parametres": []
+      },
+      {
+        "est_constructeur": false,
+        "nom": "toString",
+        "visibilite": "public",
+        "type_sortie": "String",
+        "parametres": []
+      }
+    ]
+  }
+]
