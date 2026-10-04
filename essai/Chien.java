@@ -2,7 +2,7 @@ package essai;
 
 
 
-public class Chien extends Animal implements Comparable {
+public class Chien extends Animal implements Comparable, Cloneable {
     private String nom;
     private int age;
 
