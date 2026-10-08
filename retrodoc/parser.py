@@ -1,9 +1,7 @@
-from retrodoc.models import ClassInfo
-from retrodoc.models import FieldInfo
-from retrodoc.models import MethodInfo
-from retrodoc.models import ParametreInfo
 import tree_sitter_java
 from tree_sitter import Language, Parser
+
+from retrodoc.models import ClassInfo, FieldInfo, MethodInfo, ParametreInfo
 
 JAVA = Language(tree_sitter_java.language())
 parser = Parser(JAVA)
@@ -20,7 +18,8 @@ def lire_visibilite(noeud) -> str:
 
 def parser_fichier(chemin: str) -> list[ClassInfo]:
     
-    code = open(chemin, "rb").read()
+    with open(chemin, "rb") as f:
+        code = f.read()
     tree = parser.parse(code)
     racine = tree.root_node
     liste = []
@@ -104,8 +103,13 @@ def parser_fichier(chemin: str) -> list[ClassInfo]:
             elif enfant.type == "enum_declaration":
                 genre = "enum"
 
+            nom = enfant.child_by_field_name("name").text.decode()
+
+            dependances = set(extraire_types(noeud_corps))
+            dependances.discard(nom)
+
             classe = ClassInfo(
-                nom = enfant.child_by_field_name("name").text.decode(),
+                nom = nom,
                 parent = parent,
                 genre = genre,
                 fichier = chemin,
@@ -113,10 +117,28 @@ def parser_fichier(chemin: str) -> list[ClassInfo]:
                 ligne_fin = enfant.end_point[0]+1,
                 interfaces = interfaces,
                 attributs = attributes,
-                methodes = methodes
+                methodes = methodes,
+                dependances = sorted(dependances),
             )
             liste.append(classe)
     return liste
+
+
+def extraire_types(noeud) -> list[str]:
+    types = []
+    if noeud.type == "type_identifier":
+        types.append(noeud.text.decode())    
+    for enfant in noeud.named_children:
+        types.extend(extraire_types(enfant))
+    return types
+
+
+
+
+
+
+
+
 if __name__ == "__main__":
     print(parser_fichier("essai/Chien.java"))
     print(parser_fichier("essai/Animal.java"))

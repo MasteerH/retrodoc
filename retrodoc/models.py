@@ -31,4 +31,4 @@ class ClassInfo:
     interfaces: list[str] = field(default_factory=list)
     attributs: list[FieldInfo] = field(default_factory=list)
     methodes: list[MethodInfo] = field(default_factory=list)
-    
+    dependances: list[str] = field(default_factory=list)

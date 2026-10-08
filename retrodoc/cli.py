@@ -1,9 +1,11 @@
-from pathlib import Path
-from retrodoc.parser import parser_fichier
-from retrodoc.models import ClassInfo
-from dataclasses import asdict
-import json
 import argparse
+import json
+from dataclasses import asdict
+from pathlib import Path
+
+from retrodoc.models import ClassInfo
+from retrodoc.parser import parser_fichier
+
 
 def trouver_fichiers_java(dossier: str) -> list[str]:
     fichiers = Path(dossier).rglob("*.java")
