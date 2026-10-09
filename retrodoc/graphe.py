@@ -1,5 +1,6 @@
 from retrodoc.models import ClassInfo
 
+
 def construire_liens(classes: list[ClassInfo]) -> list[tuple[str, str, str]]:
     noms_connus = {c.nom for c in classes}
     liens = []
