@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 
 
+
 @dataclass
 class ParametreInfo:
     nom: str
