@@ -22,3 +22,6 @@ htmlcov/
 output/
 
 analyse.json
+hackathon.json
+/DOCUMENTATION.md
+*.zip
